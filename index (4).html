@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="uz" data-theme="blue">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TechZone — Elektronika Do'koni</title>
+<link rel="stylesheet" href="style (1).css">
+</head>
+<body>
+
+<!-- BG GLOWS -->
+<div class="bg-glow bg-glow-1"></div>
+<div class="bg-glow bg-glow-2"></div>
+
+<!-- ===== NAVBAR ===== -->
+<nav class="navbar">
+  <span class="logo" id="logo-text" onclick="goPage('home')">Tech<span>Zone</span></span>
+
+  <ul class="nav-menu">
+    <li><a class="nav-link active" data-key="nav_home" data-page="home" onclick="goPage('home')">Bosh sahifa</a></li>
+    <li><a class="nav-link" data-key="nav_catalog" data-page="catalog" onclick="goPage('catalog')">Katalog</a></li>
+    <li><a class="nav-link" data-key="nav_cart" data-page="cart" onclick="goPage('cart')">Savat</a></li>
+    <li><a class="nav-link" data-key="nav_about" data-page="about" onclick="goPage('about')">Biz haqimizda</a></li>
+    <li><a class="nav-link" data-key="nav_contact" data-page="contact" onclick="goPage('contact')">Aloqa</a></li>
+  </ul>
+
+  <div class="nav-right">
+    <div class="lang-toggle">
+      <button class="lang-btn active" data-lang="uz" onclick="setLang('uz')">UZ</button>
+      <button class="lang-btn" data-lang="ru" onclick="setLang('ru')">RU</button>
+    </div>
+    <button class="btn-cart" onclick="goPage('cart')">
+      <span id="cart-btn-text">🛒 Savat</span>
+      <span class="cart-count" id="cart-count-badge">0</span>
+    </button>
+    <button class="btn-primary" id="login-btn-text">Kirish</button>
+    <button class="hamburger" onclick="toggleMobileMenu()">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobile-menu">
+  <a class="mobile-link active" data-key="nav_home" data-page="home" onclick="goPage('home')">Bosh sahifa</a>
+  <a class="mobile-link" data-key="nav_catalog" data-page="catalog" onclick="goPage('catalog')">Katalog</a>
+  <a class="mobile-link" data-key="nav_cart" data-page="cart" onclick="goPage('cart')">Savat</a>
+  <a class="mobile-link" data-key="nav_about" data-page="about" onclick="goPage('about')">Biz haqimizda</a>
+  <a class="mobile-link" data-key="nav_contact" data-page="contact" onclick="goPage('contact')">Aloqa</a>
+</div>
+
+<!-- ===== PAGE: HOME ===== -->
+<div class="page active" id="page-home">
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="hero-content">
+      <div class="hero-badge">
+        <div class="badge-dot"></div>
+        <span id="hero-badge-text">Yangi kolleksiya — 2025</span>
+      </div>
+      <h1 id="hero-h1">Eng Yaxshi<br><span class="c1">Elektronika</span><br><span class="c2">Do'koni</span></h1>
+      <p class="hero-desc" id="hero-desc">O'zbekistonning eng katta onlayn elektronika do'koniga xush kelibsiz.</p>
+      <div class="hero-cta">
+        <button class="btn-big" id="hero-shop-btn" onclick="goPage('catalog')">Xarid qilish →</button>
+        <button class="btn-outline" id="hero-catalog-btn" onclick="goPage('catalog')">Katalog</button>
+      </div>
+      <div class="hero-stats">
+        <div class="stat-item">
+          <div class="stat-num">10K<span>+</span></div>
+          <div class="stat-label" id="stat1-label">Mahsulot</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num">50K<span>+</span></div>
+          <div class="stat-label" id="stat2-label">Mijozlar</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num">4.9<span>★</span></div>
+          <div class="stat-label" id="stat3-label">Reyting</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-visual">
+      <div class="hero-card">
+        <span class="hero-emoji">📱</span>
+        <div class="hero-pname" id="hero-pname">iPhone 15 Pro Max</div>
+        <div class="hero-pprice" id="hero-pprice">16 990 000 so'm</div>
+      </div>
+      <div class="float-tag ft1" id="ft1">⭐ Top tanlov</div>
+      <div class="float-tag ft2" id="ft2">🔥 -20% chegirma</div>
+      <div class="float-tag ft3" id="ft3">✅ Kafolat 2 yil</div>
+    </div>
+  </div>
+
+  <!-- MARQUEE -->
+  <div class="marquee-wrap">
+    <div class="marquee-track">
+      <span class="marquee-item"><b>★</b>APPLE</span>
+      <span class="marquee-item"><b>★</b>SAMSUNG</span>
+      <span class="marquee-item"><b>★</b>XIAOMI</span>
+      <span class="marquee-item"><b>★</b>SONY</span>
+      <span class="marquee-item"><b>★</b>LENOVO</span>
+      <span class="marquee-item"><b>★</b>ASUS</span>
+      <span class="marquee-item"><b>★</b>DELL</span>
+      <span class="marquee-item"><b>★</b>HP</span>
+      <span class="marquee-item"><b>★</b>HUAWEI</span>
+      <span class="marquee-item"><b>★</b>LG</span>
+      <span class="marquee-item"><b>★</b>APPLE</span>
+      <span class="marquee-item"><b>★</b>SAMSUNG</span>
+      <span class="marquee-item"><b>★</b>XIAOMI</span>
+      <span class="marquee-item"><b>★</b>SONY</span>
+      <span class="marquee-item"><b>★</b>LENOVO</span>
+      <span class="marquee-item"><b>★</b>ASUS</span>
+      <span class="marquee-item"><b>★</b>DELL</span>
+      <span class="marquee-item"><b>★</b>HP</span>
+      <span class="marquee-item"><b>★</b>HUAWEI</span>
+      <span class="marquee-item"><b>★</b>LG</span>
+    </div>
+  </div>
+
+  <!-- CATEGORIES -->
+  <section>
+    <div class="section-header">
+      <div class="section-tag" id="cat-tag">Kategoriyalar</div>
+      <h2 class="section-title" id="cat-title">Nima qidirayapsiz?</h2>
+      <p class="section-desc" id="cat-desc">Barcha turkumlarda keng assortiment mavjud</p>
+    </div>
+    <div class="categories-grid">
+      <div class="cat-card" onclick="goPage('catalog')"><span class="cat-icon">📱</span><div class="cat-name" id="cat1">Smartfonlar</div><div class="cat-count">1 240</div></div>
+      <div class="cat-card" onclick="goPage('catalog')"><span class="cat-icon">💻</span><div class="cat-name" id="cat2">Noutbuklar</div><div class="cat-count">580</div></div>
+      <div class="cat-card" onclick="goPage('catalog')"><span class="cat-icon">🎧</span><div class="cat-name" id="cat3">Audio</div><div class="cat-count">860</div></div>
+      <div class="cat-card" onclick="goPage('catalog')"><span class="cat-icon">📺</span><div class="cat-name" id="cat4">Televizorlar</div><div class="cat-count">320</div></div>
+      <div class="cat-card" onclick="goPage('catalog')"><span class="cat-icon">⌚</span><div class="cat-name" id="cat5">Soatlar</div><div class="cat-count">450</div></div>
+      <div class="cat-card" onclick="goPage('catalog')"><span class="cat-icon">🎮</span><div class="cat-name" id="cat6">O'yin qurilmalari</div><div class="cat-count">290</div></div>
+      <div class="cat-card" onclick="goPage('catalog')"><span class="cat-icon">📷</span><div class="cat-name" id="cat7">Kameralar</div><div class="cat-count">180</div></div>
+      <div class="cat-card" onclick="goPage('catalog')"><span class="cat-icon">🖨️</span><div class="cat-name" id="cat8">Aksessuarlar</div><div class="cat-count">2 100</div></div>
+    </div>
+  </section>
+
+  <!-- PRODUCTS -->
+  <section>
+    <div class="section-header">
+      <div class="section-tag" id="prod-tag">Mahsulotlar</div>
+      <h2 class="section-title" id="prod-title">Eng Ko'p Sotilgan</h2>
+      <p class="section-desc" id="prod-desc">Mijozlar tomonidan eng yuqori baholangan mahsulotlar</p>
+    </div>
+    <div class="products-grid" id="products-home-grid"></div>
+  </section>
+
+  <!-- PROMO BANNER -->
+  <div class="promo-banner">
+    <div>
+      <div class="promo-tag-label" id="promo-label">⚡ Maxsus taklif</div>
+      <h2 class="promo-title">
+        <span id="promo-ta">Bugungi</span><br>
+        <span id="promo-tb" style="color:var(--primary)">Chegirma</span><br>
+        <span id="promo-tc">Fursatini Qo'ldan Bermang!</span>
+      </h2>
+      <p class="promo-sub" id="promo-sub">Barcha smartfonlarga 25% gacha chegirma. Faqat bugun!</p>
+      <div class="countdown">
+        <div class="cnt-block"><div class="cnt-num" id="cnt-hours">08</div><div class="cnt-label" id="cnt-soat-label">Soat</div></div>
+        <div class="cnt-block"><div class="cnt-num" id="cnt-mins">34</div><div class="cnt-label" id="cnt-daqiqa-label">Daqiqa</div></div>
+        <div class="cnt-block"><div class="cnt-num" id="cnt-secs">12</div><div class="cnt-label" id="cnt-soniya-label">Soniya</div></div>
+      </div>
+      <button class="btn-big" id="promo-go-btn" style="margin-top:26px" onclick="goPage('catalog')">Aksiyaga o'tish →</button>
+    </div>
+    <div class="promo-right">
+      <span class="promo-emoji-big">📱</span>
+      <div class="promo-disc" id="promo-disc">−25% chegirma</div>
+    </div>
+  </div>
+
+  <!-- FEATURES -->
+  <div class="features-grid">
+    <div class="feature-card"><div class="f-icon">🚀</div><div class="f-title" id="f1-title">Tez Yetkazib Berish</div><div class="f-desc" id="f1-desc">Toshkent bo'ylab 2-4 soatda.</div></div>
+    <div class="feature-card"><div class="f-icon">🛡️</div><div class="f-title" id="f2-title">Rasmiy Kafolat</div><div class="f-desc" id="f2-desc">1-2 yil rasmiy kafolat.</div></div>
+    <div class="feature-card"><div class="f-icon">💳</div><div class="f-title" id="f3-title">Bo'lib To'lash</div><div class="f-desc" id="f3-desc">0% foiz bilan 6 oy.</div></div>
+    <div class="feature-card"><div class="f-icon">↩️</div><div class="f-title" id="f4-title">14 Kun Qaytarish</div><div class="f-desc" id="f4-desc">Savolsiz qaytarish.</div></div>
+  </div>
+
+</div><!-- /page-home -->
+
+<!-- ===== PAGE: CATALOG ===== -->
+<div class="page" id="page-catalog">
+  <div class="section-header" style="text-align:left;padding-bottom:0">
+    <div class="section-tag">TechZone</div>
+    <h1 class="section-title" id="catalog-page-title">Katalog</h1>
+  </div>
+  <div class="catalog-layout">
+    <!-- SIDEBAR -->
+    <div class="sidebar">
+      <h3 id="filter-title">Filtr</h3>
+      <div class="filter-group">
+        <h4 id="filter-cat-title">Kategoriya</h4>
+        <div id="filter-cat-btns"></div>
+      </div>
+      <div class="filter-group">
+        <h4 id="filter-brand-title">Brend</h4>
+        <div id="filter-brand-btns"></div>
+      </div>
+      <div class="filter-group">
+        <h4 id="filter-price-title">Narx</h4>
+        <div class="price-range">
+          <input class="price-input" id="price-from-input" type="number" placeholder="Dan">
+          <input class="price-input" id="price-to-input" type="number" placeholder="Gacha">
+        </div>
+      </div>
+    </div>
+    <!-- MAIN -->
+    <div>
+      <div class="catalog-top">
+        <h2 id="catalog-count">9 ta mahsulot</h2>
+        <select class="sort-select" id="sort-select"></select>
+      </div>
+      <div class="catalog-grid" id="catalog-grid"></div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== PAGE: CART ===== -->
+<div class="page" id="page-cart">
+  <div class="section-header" style="text-align:left;padding-bottom:0">
+    <div class="section-tag">TechZone</div>
+    <h1 class="section-title" id="cart-page-title">Savat</h1>
+  </div>
+  <div class="cart-layout">
+    <div class="cart-items">
+      <div id="cart-items-list"></div>
+    </div>
+    <div class="cart-summary" id="cart-summary">
+      <h3 id="summary-title">Buyurtma summasi</h3>
+      <div class="summary-row">
+        <span id="summary-items-label">Mahsulotlar</span>
+        <span id="summary-items-val">0</span>
+      </div>
+      <div class="summary-row">
+        <span id="summary-delivery-label">Yetkazib berish</span>
+        <span id="summary-delivery-val">Bepul</span>
+      </div>
+      <div class="summary-row">
+        <span id="summary-discount-label">Chegirma</span>
+        <span id="summary-discount-val" style="color:var(--accent2)">−0</span>
+      </div>
+      <div class="summary-row total">
+        <span id="summary-total-label">Jami</span>
+        <span id="summary-total-val">0</span>
+      </div>
+      <div class="promo-code">
+        <label id="promo-label-text">Promo kod</label>
+        <div class="promo-input-row">
+          <input class="promo-inp" id="promo-input" placeholder="Kodni kiriting">
+          <button class="btn-apply" id="apply-btn-text">Qo'llash</button>
+        </div>
+      </div>
+      <button class="btn-big" style="width:100%" id="checkout-btn-text">Buyurtma berish →</button>
+    </div>
+  </div>
+</div>
+
+<!-- ===== PAGE: ABOUT ===== -->
+<div class="page" id="page-about">
+  <div class="about-hero">
+    <div class="section-tag">TechZone</div>
+    <h1 id="about-h1">TechZone <span>Haqida</span></h1>
+    <p id="about-desc">2018-yildan buyon O'zbekistonda eng sifatli elektronika mahsulotlarini etkazib berib kelmoqdamiz.</p>
+  </div>
+
+  <div class="about-stats">
+    <div class="about-stat"><div class="as-num">10K+</div><div class="as-label" id="as1-label">Mahsulot</div></div>
+    <div class="about-stat"><div class="as-num">50K+</div><div class="as-label" id="as2-label">Mijozlar</div></div>
+    <div class="about-stat"><div class="as-num">14</div><div class="as-label" id="as3-label">Shaharlar</div></div>
+    <div class="about-stat"><div class="as-num">7+</div><div class="as-label" id="as4-label">Yillik tajriba</div></div>
+  </div>
+
+  <div class="about-grid">
+    <div class="about-card"><div class="about-icon">🎯</div><h3 id="ac1-title">Bizning <span>Missiyamiz</span></h3><p id="ac1-desc"></p></div>
+    <div class="about-card"><div class="about-icon">🛡️</div><h3 id="ac2-title">Kafolat va <span>Sifat</span></h3><p id="ac2-desc"></p></div>
+    <div class="about-card"><div class="about-icon">🚀</div><h3 id="ac3-title">Tez <span>Yetkazib Berish</span></h3><p id="ac3-desc"></p></div>
+    <div class="about-card"><div class="about-icon">💬</div><h3 id="ac4-title">Mijozlar <span>Xizmati</span></h3><p id="ac4-desc"></p></div>
+  </div>
+
+  <div class="team-section">
+    <h2 id="team-title">Bizning Jamoa</h2>
+    <div class="team-grid">
+      <div class="team-card"><span class="team-avatar">👨‍💼</span><div class="team-name" id="tm1-name">Jasur Xoliqov</div><div class="team-role" id="tm1-role">CEO</div><div class="team-desc" id="tm1-desc"></div></div>
+      <div class="team-card"><span class="team-avatar">👩‍💼</span><div class="team-name" id="tm2-name">Nilufar Rashidova</div><div class="team-role" id="tm2-role">Marketing</div><div class="team-desc" id="tm2-desc"></div></div>
+      <div class="team-card"><span class="team-avatar">👨‍💻</span><div class="team-name" id="tm3-name">Sherzod Toshmatov</div><div class="team-role" id="tm3-role">Tech Lead</div><div class="team-desc" id="tm3-desc"></div></div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== PAGE: CONTACT ===== -->
+<div class="page" id="page-contact">
+  <div class="section-header">
+    <div class="section-tag">TechZone</div>
+    <h1 class="section-title" id="contact-h2">Biz Bilan <span>Bog'laning</span></h1>
+  </div>
+  <div class="contact-layout">
+    <div class="contact-info">
+      <p id="contact-p">Savol, taklif yoki shikoyatlaringiz bo'lsa, biz doim eshitishga tayyormiz.</p>
+      <div class="contact-items">
+        <div class="contact-item"><div class="ci-icon">📞</div><div><div class="ci-label" id="ci1-label">Telefon</div><div class="ci-value" id="ci1-val">+998 71 200-00-00</div></div></div>
+        <div class="contact-item"><div class="ci-icon">✉️</div><div><div class="ci-label" id="ci2-label">Email</div><div class="ci-value" id="ci2-val">info@techzone.uz</div></div></div>
+        <div class="contact-item"><div class="ci-icon">📍</div><div><div class="ci-label" id="ci3-label">Manzil</div><div class="ci-value" id="ci3-val">Toshkent, Chilonzor, 22-uy</div></div></div>
+        <div class="contact-item"><div class="ci-icon">🕐</div><div><div class="ci-label" id="ci4-label">Ish vaqti</div><div class="ci-value" id="ci4-val">Dush–Yak: 9:00–22:00</div></div></div>
+      </div>
+    </div>
+
+    <div class="contact-form">
+      <h3 id="form-title">Xabar Yuboring</h3>
+      <form onsubmit="submitForm(event)">
+        <div class="form-row">
+          <div class="form-group"><label id="form-name-label">Ismingiz</label><input class="form-input" type="text" required></div>
+          <div class="form-group"><label id="form-phone-label">Telefon</label><input class="form-input" type="tel"></div>
+        </div>
+        <div class="form-group">
+          <label id="form-subject-label">Mavzu</label>
+          <select class="form-select" id="form-select"></select>
+        </div>
+        <div class="form-group">
+          <label id="form-msg-label">Xabar</label>
+          <textarea class="form-textarea" required></textarea>
+        </div>
+        <button type="submit" class="btn-big" style="width:100%">
+          <span id="form-send-btn-text">Xabar Yuborish →</span>
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div>
+    <span class="footer-logo">Tech<span>Zone</span></span>
+    <p class="footer-about" id="footer-about-text">O'zbekistonning ishonchli elektronika do'koni.</p>
+    <div class="footer-social">
+      <a class="social-btn" href="#">📘</a>
+      <a class="social-btn" href="#">📸</a>
+      <a class="social-btn" href="#">✈️</a>
+      <a class="social-btn" href="#">▶️</a>
+    </div>
+  </div>
+  <div class="footer-col">
+    <h4 id="fc1-title">Kompaniya</h4>
+    <ul>
+      <li><a id="fc1-1">Biz haqimizda</a></li>
+      <li><a id="fc1-2">Yangiliklar</a></li>
+      <li><a id="fc1-3">Karyera</a></li>
+      <li><a id="fc1-4">Hamkorlik</a></li>
+    </ul>
+  </div>
+  <div class="footer-col">
+    <h4 id="fc2-title">Xizmatlar</h4>
+    <ul>
+      <li><a id="fc2-1">Buyurtma berish</a></li>
+      <li><a id="fc2-2">Bo'lib to'lash</a></li>
+      <li><a id="fc2-3">Kafolat</a></li>
+      <li><a id="fc2-4">Qaytarish</a></li>
+    </ul>
+  </div>
+  <div class="footer-col">
+    <h4 id="fc3-title">Aloqa</h4>
+    <ul>
+      <li><a id="fc3-1">📞 +998 71 200-00-00</a></li>
+      <li><a id="fc3-2">✉️ info@techzone.uz</a></li>
+      <li><a id="fc3-3">📍 Toshkent, Chilonzor</a></li>
+      <li><a id="fc3-4">🕐 9:00 – 22:00</a></li>
+    </ul>
+  </div>
+</footer>
+<div class="footer-bottom">
+  <p id="footer-bottom-left">© 2025 TechZone. Barcha huquqlar himoyalangan.</p>
+  <p id="footer-bottom-right">Maxfiylik · Foydalanish shartlari</p>
+</div>
+
+<!-- ===== COLOR PICKER ===== -->
+<div class="color-picker" id="color-picker-wrap">
+  <div class="color-panel" id="color-panel">
+    <h4 id="color-panel-title">Rang o'zgartirish</h4>
+    <div class="color-swatches">
+      <div class="swatch swatch-blue active" data-theme="blue" onclick="setTheme('blue')" title="Ko'k"></div>
+      <div class="swatch swatch-green" data-theme="green" onclick="setTheme('green')" title="Yashil"></div>
+      <div class="swatch swatch-purple" data-theme="purple" onclick="setTheme('purple')" title="Binafsha"></div>
+      <div class="swatch swatch-red" data-theme="red" onclick="setTheme('red')" title="Qizil"></div>
+      <div class="swatch swatch-orange" data-theme="orange" onclick="setTheme('orange')" title="To'q sariq"></div>
+      <div class="swatch swatch-light" data-theme="light" onclick="setTheme('light')" title="Och"></div>
+    </div>
+  </div>
+  <button class="color-toggle" onclick="toggleColorPanel()">🎨</button>
+</div>
+
+<!-- TOAST -->
+<div class="toast" id="toast">✅ Savatga qo'shildi!</div>
+
+<script src="main (2).js"></script>
+</body>
+</html>
